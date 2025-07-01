@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flash Store - Contas Premium</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <div class="logo">
+                <img src="assets/images/flash-store-logo.jpeg" alt="Flash Store" class="logo-img">
+                <span class="logo-text">FLASH STORE</span>
+            </div>
+            <div class="search-bar">
+                <i class="fas fa-search"></i>
+                <input type="text" placeholder="Pesquisar produto">
+            </div>
+            <div class="header-actions">
+                <button class="cart-btn" onclick="toggleCart()">
+                    <i class="fas fa-shopping-cart"></i>
+                    <span>Carrinho</span>
+                    <span class="cart-count" id="cartCount">0</span>
+                </button>
+                <button class="login-btn">Entrar</button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="main-content">
+        <div class="container">
+            <h1 class="section-title">CONTAS - ACCOUNTS - LINK</h1>
+            
+            <!-- Products Grid -->
+            <div class="products-grid" id="productsGrid">
+                <!-- Products will be dynamically loaded here -->
+            </div>
+        </div>
+    </main>
+
+    <!-- Cart Sidebar -->
+    <div class="cart-sidebar" id="cartSidebar">
+        <div class="cart-header">
+            <h2>Carrinhos de compras</h2>
+            <button class="close-cart" onclick="toggleCart()">
+                <i class="fas fa-times"></i>
+            </button>
+        </div>
+        <div class="cart-content" id="cartContent">
+            <div class="empty-cart" id="emptyCart">
+                <div class="empty-cart-icon">
+                    <i class="fas fa-shopping-bag"></i>
+                </div>
+                <p>Monte um carrinho de compras!</p>
+                <button class="discover-btn" onclick="toggleCart()">Descobrir produtos</button>
+            </div>
+        </div>
+        <div class="cart-summary" id="cartSummary" style="display: none;">
+            <h3>Resumo da compra</h3>
+            <p>Aqui, você encontrará os valores da sua compra assim que adicionar produtos.</p>
+            <div class="cart-items" id="cartItems"></div>
+            <div class="cart-total">
+                <div class="total-line">
+                    <span>Subtotal</span>
+                    <span id="subtotal">R$ 0,00</span>
+                </div>
+                <div class="total-line">
+                    <span>Método</span>
+                    <span>Pix</span>
+                </div>
+                <div class="total-line total-final">
+                    <span>Total</span>
+                    <span id="total">R$ 0,00</span>
+                </div>
+            </div>
+            <button class="continue-btn" onclick="showCheckout()">Continuar a Comprar</button>
+        </div>
+    </div>
+
+    <!-- Checkout Modal -->
+    <div class="checkout-modal" id="checkoutModal">
+        <div class="checkout-content">
+            <div class="checkout-header">
+                <h2>Carrinhos de compras</h2>
+                <button class="close-checkout" onclick="closeCheckout()">
+                    <i class="fas fa-times"></i>
+                </button>
+            </div>
+            <p class="checkout-subtitle">Nesta página, você encontra os produtos adicionados ao seu carrinho.</p>
+            
+            <div class="checkout-main">
+                <div class="payment-info">
+                    <h3>Informações de pagamento</h3>
+                    <div class="payment-methods">
+                        <label class="payment-method">
+                            <input type="radio" name="payment" value="pix" checked>
+                            <span class="payment-icon">
+                                <i class="fas fa-qrcode"></i>
+                            </span>
+                            <span>Pix</span>
+                        </label>
+                        <label class="payment-method">
+                            <input type="radio" name="payment" value="card">
+                            <span class="payment-icon">
+                                <i class="fas fa-credit-card"></i>
+                            </span>
+                            <span>Cartão de Crédito/Débito</span>
+                        </label>
+                        <label class="payment-method">
+                            <input type="radio" name="payment" value="mercadopago">
+                            <span class="payment-icon">
+                                <i class="fab fa-cc-mastercard"></i>
+                            </span>
+                            <span>Mercado Pago</span>
+                        </label>
+                    </div>
+                    
+                    <div class="email-fields">
+                        <div class="field-group">
+                            <label>Informe o seu e-mail</label>
+                            <input type="email" placeholder="Insira seu email" required>
+                        </div>
+                        <div class="field-group">
+                            <label>Informe novamente o seu e-mail</label>
+                            <input type="email" placeholder="Insira seu email" required>
+                        </div>
+                    </div>
+                    
+                    <div class="discount-section">
+                        <div class="discount-header">
+                            <i class="fas fa-tag"></i>
+                            <span>Cupom de desconto</span>
+                        </div>
+                        <p>Adicione desconto em seu pedido!</p>
+                        <button class="add-discount">Adicionar</button>
+                    </div>
+                </div>
+                
+                <div class="cart-items-checkout">
+                    <h3>Produtos no carrinho <span id="checkoutItemCount">1 item</span></h3>
+                    <div id="checkoutItems"></div>
+                </div>
+                
+                <div class="checkout-summary">
+                    <h3>Resumo da compra</h3>
+                    <div class="summary-lines">
+                        <div class="summary-line">
+                            <span>Subtotal</span>
+                            <span id="checkoutSubtotal">R$ 0,00</span>
+                        </div>
+                        <div class="summary-line">
+                            <span>Método</span>
+                            <span>Pix</span>
+                        </div>
+                        <div class="summary-line total">
+                            <span>Total</span>
+                            <span id="checkoutTotal">R$ 0,00</span>
+                        </div>
+                    </div>
+                    <div class="terms">
+                        <label>
+                            <input type="checkbox" required>
+                            <span>Li e concordo com os Termos de Serviço</span>
+                        </label>
+                    </div>
+                    <button class="finalize-btn" onclick="finalizeOrder()">Continuar a Comprar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Success Modal -->
+    <div class="success-modal" id="successModal">
+        <div class="success-content">
+            <div class="success-header">
+                <h2>Pedido Confirmado!</h2>
+                <p>Seu pedido foi registrado com sucesso</p>
+            </div>
+            
+            <div class="next-step">
+                <div class="step-icon">
+                    <i class="fab fa-discord"></i>
+                </div>
+                <h3>Próximo Passo: Entre em Contato</h3>
+                <p>Para receber seus produtos, entre em contato comigo no Discord:</p>
+                
+                <div class="discord-info">
+                    <span>Discord:</span>
+                    <div class="discord-tag">
+                        <span>edu_max</span>
+                        <button onclick="copyDiscord()">
+                            <i class="fas fa-copy"></i>
+                            Copiar
+                        </button>
+                    </div>
+                </div>
+                
+                <button class="discord-btn">
+                    <i class="fab fa-discord"></i>
+                    Abrir Discord e Enviar Mensagem
+                </button>
+                
+                <div class="instructions">
+                    <h4>Instruções:</h4>
+                    <ul>
+                        <li>Clique no botão acima para abrir o Discord</li>
+                        <li>Tire uma foto/print desta tela do pedido</li>
+                        <li>Envie uma mensagem privada para <strong>edu_max</strong></li>
+                        <li>Mencione os produtos que você comprou e envie a foto do pedido</li>
+                        <li>Aguarde a entrega dos seus produtos premium!</li>
+                    </ul>
+                </div>
+                
+                <div class="order-summary">
+                    <h4>Resumo do Pedido:</h4>
+                    <div id="finalOrderSummary"></div>
+                    <div class="final-total">
+                        <strong>Total: <span id="finalTotal">R$ 0,00</span></strong>
+                    </div>
+                </div>
+                
+                <div class="action-buttons">
+                    <button class="back-btn" onclick="backToStore()">
+                        <i class="fas fa-arrow-left"></i>
+                        Voltar à Loja
+                    </button>
+                    <button class="new-order-btn" onclick="newOrder()">Novo Pedido</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Overlay -->
+    <div class="overlay" id="overlay"></div>
+
+    <script src="script.js"></script>
+</body>
+</html>
+
