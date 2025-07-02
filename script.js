@@ -3,7 +3,7 @@ const products = [
     {
         id: 1,
         name: "Canva Pro",
-        image: "assets/images/canva-pro.png",
+        image: "assets/images/canva-pro.png.png",
         originalPrice: 15.99,
         currentPrice: 4.99,
         discount: 69,
