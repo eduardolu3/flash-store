@@ -167,26 +167,19 @@ function addToCart(productId) {
             quantity: 1
         });
     }
-    
     updateCartUI();
+    toggleCart(); // Abre o carrinho automaticamente após adicionar um produto
     
     // Show success animation
     const button = event.target;
     const originalText = button.innerHTML;
     button.innerHTML = '<i class="fas fa-check"></i> Adicionado!';
-    button.style.background = '#00ff88';
+    button.style.background = \"#00ff88\";
     
     setTimeout(() => {
         button.innerHTML = originalText;
-        button.style.background = '#c8ff00';
+        button.style.background = \"#c8ff00\";
     }, 1500);
-}
-
-// Remove product from cart
-function removeFromCart(productId) {
-    cart = cart.filter(item => item.id !== productId);
-    updateCartUI();
-}
 
 // Update quantity
 function updateQuantity(productId, change) {
