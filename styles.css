@@ -160,6 +160,8 @@ body::before {
     position: absolute;
     top: -5px;
     right: -5px;
+    min-width: 20px;
+    text-align: center;
 }
 
 .login-btn {
@@ -1081,5 +1083,18 @@ body::before {
     .success-content {
         padding: 20px;
     }
+}
+
+
+
+.cart-count {
+    align-items: center;
+    justify-content: center;
+    font-size: 12px;
+    position: absolute;
+    top: -5px;
+    right: -5px;
+    min-width: 20px;
+    text-align: center;
 }
 

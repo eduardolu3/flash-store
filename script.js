@@ -30,7 +30,7 @@ const products = [
     {
         id: 4,
         name: "Spotify Family",
-        image: "assets/images/spotify-family.png",
+        image: "assets/images/spotify-family-generica.png",
         originalPrice: 26.90,
         currentPrice: 8.99,
         discount: 67,
