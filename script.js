@@ -93,7 +93,7 @@ const products = [
     {
         id: 11,
         name: "Spotify Premium Individual",
-        image: "assets/images/spotify-premium.png",
+        image: "assets/images/spotify-individual..png",
         originalPrice: 21.90,
         currentPrice: 7.99,
         discount: 64,
