@@ -100,27 +100,9 @@ const products = [
         description: "Filmes e séries em 4K"
     },
     {
-        id: 7,
-        name: "Paramount Premium",
-        image: "assets/images/paramount.png",
-        originalPrice: 19.90,
-        currentPrice: 6.99,
-        discount: 65,
-        description: "Séries e filmes de sucesso"
-    },
-    {
-        id: 8,
-        name: "Crunchyroll Premium",
-        image: "assets/images/crunchyroll.png",
-        originalPrice: 14.90,
-        currentPrice: 4.99,
-        discount: 66,
-        description: "Animes e mangás ilimitados"
-    },
-    {
-        id: 11,
+        id: 12,
         name: "ChatGPT Plus",
-        image: "assets/images/chatgpt-plus.png",
+        image: "assets/images/chatgpt-pluss.png",
         originalPrice: 14.99,
         currentPrice: 10.00,
         discount: 0,
