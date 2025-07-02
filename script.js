@@ -3,7 +3,7 @@ const products = [
     {
         id: 1,
         name: "Canva Pro",
-        image: "assets/images/canva-pro.png.png",
+        image: "assets/images/canva-pro.png",
         originalPrice: 15.99,
         currentPrice: 4.99,
         discount: 69,
@@ -93,16 +93,16 @@ const products = [
     {
         id: 11,
         name: "Spotify Premium Individual",
-        image: "assets/images/spotify-individual..png",
+        image: "assets/images/spotify-individual.png",
         originalPrice: 21.90,
         currentPrice: 7.99,
         discount: 64,
-        description: "Filmes e séries em 4K"
+        description: "Música premium individual"
     },
     {
         id: 12,
         name: "ChatGPT Plus",
-        image: "assets/images/chatgpt-pluss.png",
+        image: "assets/images/chatgpt-plus.png",
         originalPrice: 14.99,
         currentPrice: 10.00,
         discount: 0,
