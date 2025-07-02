@@ -13,8 +13,8 @@ const products = [
         id: 2,
         name: "CapCut Pro",
         image: "assets/images/capcut-pro.jpg",
-        originalPrice: 12.99,
-        currentPrice: 3.99,
+        originalPrice: 14.99,
+        currentPrice: 10.00,
         discount: 69,
         description: "Edição de vídeo premium"
     },
@@ -23,7 +23,7 @@ const products = [
         name: "YouTube Premium",
         image: "assets/images/youtube-premium.png",
         originalPrice: 20.90,
-        currentPrice: 6.99,
+        currentPrice: 7.99,
         discount: 67,
         description: "Sem anúncios e downloads"
     },
@@ -32,7 +32,7 @@ const products = [
         name: "Spotify Family",
         image: "assets/images/spotify-family-generica.png",
         originalPrice: 26.90,
-        currentPrice: 8.99,
+        currentPrice: 10.99,
         discount: 67,
         description: "Até 6 contas premium"
     },
@@ -77,7 +77,7 @@ const products = [
         name: "Netflix Premium",
         image: "assets/images/netflix.png",
         originalPrice: 55.90,
-        currentPrice: 19.99,
+        currentPrice: 9.99,
         discount: 64,
         description: "Séries e filmes em 4K"
     },
@@ -86,7 +86,7 @@ const products = [
         name: "Disney Plus",
         image: "assets/images/disney-plus.png",
         originalPrice: 33.90,
-        currentPrice: 11.99,
+        currentPrice: 6.99,
         discount: 64,
         description: "Filmes e séries da Disney"
     },
@@ -98,15 +98,6 @@ const products = [
         currentPrice: 7.99,
         discount: 64,
         description: "Filmes e séries em 4K"
-    },
-    {
-        id: 6,
-        name: "Prime Video Premium",
-        image: "assets/images/prime-video.png",
-        originalPrice: 14.90,
-        currentPrice: 4.99,
-        discount: 66,
-        description: "Filmes e séries exclusivos"
     },
     {
         id: 7,
@@ -127,37 +118,10 @@ const products = [
         description: "Animes e mangás ilimitados"
     },
     {
-        id: 9,
-        name: "Netflix Premium",
-        image: "assets/images/netflix.png",
-        originalPrice: 55.90,
-        currentPrice: 19.99,
-        discount: 64,
-        description: "Séries e filmes em 4K"
-    },
-    {
-        id: 10,
-        name: "Disney Plus",
-        image: "assets/images/disney-plus.png",
-        originalPrice: 33.90,
-        currentPrice: 11.99,
-        discount: 64,
-        description: "Filmes e séries da Disney"
-    },
-    {
         id: 11,
-        name: "Spotify Premium Individual",
-        image: "assets/images/spotify-premium.png",
-        originalPrice: 21.90,
-        currentPrice: 7.99,
-        discount: 64,
-        description: "Música premium individual"
-    },
-    {
-        id: 12,
         name: "ChatGPT Plus",
         image: "assets/images/chatgpt-plus.png",
-        originalPrice: 10.00,
+        originalPrice: 14.99,
         currentPrice: 10.00,
         discount: 0,
         description: "Inteligência Artificial avançada"
