@@ -50,59 +50,120 @@ const products = [
         name: "Prime Video Premium",
         image: "assets/images/prime-video.png",
         originalPrice: 14.90,
-        currentPrice: 5.99,
-        discount: 60,
-        description: "Streaming premium Amazon"
+        currentPrice: 4.99,
+        discount: 66,
+        description: "Filmes e séries exclusivos"
     },
     {
         id: 7,
         name: "Paramount Premium",
         image: "assets/images/paramount.png",
         originalPrice: 19.90,
-        currentPrice: 7.99,
-        discount: 60,
-        description: "Conteúdo exclusivo Paramount"
+        currentPrice: 6.99,
+        discount: 65,
+        description: "Séries e filmes de sucesso"
     },
     {
         id: 8,
         name: "Crunchyroll Premium",
         image: "assets/images/crunchyroll.png",
-        originalPrice: 24.90,
-        currentPrice: 8.99,
-        discount: 64,
-        description: "Animes sem anúncios"
+        originalPrice: 14.90,
+        currentPrice: 4.99,
+        discount: 66,
+        description: "Animes e mangás ilimitados"
     },
     {
         id: 9,
         name: "Netflix Premium",
         image: "assets/images/netflix.png",
         originalPrice: 55.90,
-        currentPrice: 15.99,
-        discount: 71,
-        description: "4 telas simultâneas em 4K"
+        currentPrice: 19.99,
+        discount: 64,
+        description: "Séries e filmes em 4K"
     },
     {
         id: 10,
-        name: "Disney Plus Premium",
+        name: "Disney Plus",
         image: "assets/images/disney-plus.png",
-        originalPrice: 27.90,
-        currentPrice: 9.99,
+        originalPrice: 33.90,
+        currentPrice: 11.99,
         discount: 64,
-        description: "Todo universo Disney"
+        description: "Filmes e séries da Disney"
     },
     {
         id: 11,
         name: "Spotify Premium Individual",
-        image: "assets/images/spotify-individual.png",
+        image: "assets/images/spotify-premium.png",
+        originalPrice: 21.90,
+        currentPrice: 7.99,
+        discount: 64,
+        description: "Filmes e séries em 4K"
+    },
+    {
+        id: 6,
+        name: "Prime Video Premium",
+        image: "assets/images/prime-video.png",
+        originalPrice: 14.90,
+        currentPrice: 4.99,
+        discount: 66,
+        description: "Filmes e séries exclusivos"
+    },
+    {
+        id: 7,
+        name: "Paramount Premium",
+        image: "assets/images/paramount.png",
+        originalPrice: 19.90,
+        currentPrice: 6.99,
+        discount: 65,
+        description: "Séries e filmes de sucesso"
+    },
+    {
+        id: 8,
+        name: "Crunchyroll Premium",
+        image: "assets/images/crunchyroll.png",
+        originalPrice: 14.90,
+        currentPrice: 4.99,
+        discount: 66,
+        description: "Animes e mangás ilimitados"
+    },
+    {
+        id: 9,
+        name: "Netflix Premium",
+        image: "assets/images/netflix.png",
+        originalPrice: 55.90,
+        currentPrice: 19.99,
+        discount: 64,
+        description: "Séries e filmes em 4K"
+    },
+    {
+        id: 10,
+        name: "Disney Plus",
+        image: "assets/images/disney-plus.png",
+        originalPrice: 33.90,
+        currentPrice: 11.99,
+        discount: 64,
+        description: "Filmes e séries da Disney"
+    },
+    {
+        id: 11,
+        name: "Spotify Premium Individual",
+        image: "assets/images/spotify-premium.png",
         originalPrice: 21.90,
         currentPrice: 7.99,
         discount: 64,
         description: "Música premium individual"
+    },
+    {
+        id: 12,
+        name: "ChatGPT Plus",
+        image: "assets/images/chatgpt-plus.png",
+        originalPrice: 10.00,
+        currentPrice: 10.00,
+        discount: 0,
+        description: "Inteligência Artificial avançada"
     }
 ];
 
-// Cart state
-let cart = [];
 let isCartOpen = false;
 
 // DOM elements
@@ -508,4 +569,8 @@ document.addEventListener('DOMContentLoaded', function() {
         button.style.overflow = 'hidden';
     });
 });
+
+
+
+
 
